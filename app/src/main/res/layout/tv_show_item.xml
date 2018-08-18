@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemMainContainer"
+    android:background="#fff"
+    android:elevation="8dp">
+
+
+    <ImageView
+        android:id="@+id/imgTvShow"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tv_show_default" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TV Show Title"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgTvShow"
+        app:layout_constraintTop_toTopOf="@+id/imgTvShow"
+        tools:text="TV Show Title" />
+
+    <TextView
+        android:id="@+id/tvTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/type"
+        app:layout_constraintEnd_toStartOf="@+id/tvType"
+        app:layout_constraintStart_toEndOf="@+id/imgTvShow"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="@string/type" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Scripted"
+        app:layout_constraintStart_toEndOf="@+id/tvTypeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvRatingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/rating"
+        app:layout_constraintEnd_toStartOf="@+id/tvRating"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvType"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="@string/rating" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="5.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvRatingLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvRatingLabel"
+        tools:text="5.6" />
+
+    <TextView
+        android:id="@+id/tvScheduleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/schedule"
+        app:layout_constraintBottom_toBottomOf="@+id/imgTvShow"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvType"
+        tools:text= "@string/schedule" />
+
+    <TextView
+        android:id="@+id/tvShedule"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Monday 11:15"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvScheduleLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvScheduleLabel"
+        tools:text="Monday 11:15" />
+
+</android.support.constraint.ConstraintLayout>
